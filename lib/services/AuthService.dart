@@ -5,7 +5,7 @@ import 'package:fluttertoast/fluttertoast.dart';
 class AuthService {
   Dio dio = new Dio();
   //final String url = 'https://stocklift.herokuapp.com/';
-  final String url = 'http://571485263a2d.ngrok.io/';
+  final String url = 'http://42f49452e798.ngrok.io/';
   getCountries() async {
     Response response = await dio.get(url + 'countries');
     return response.data;
