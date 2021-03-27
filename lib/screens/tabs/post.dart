@@ -26,7 +26,10 @@ class _PostState extends State<Post> {
             return Text('Loading....');
           default:
             if (snapshot.hasError)
-              return Text('Error: ${snapshot.error}');
+              //return Text('Error: ${snapshot.error}');
+              return Container(
+                child: Text('Some error occured'),
+              );
             else
               //print(snapshot.data.posts[0].postedBy.firstName);
               //return Text('Result: ${snapshot.data.posts[0].content}');
