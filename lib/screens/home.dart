@@ -2,12 +2,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-//import 'package:chatting/fonts/linecons_icons.dart';
 import 'package:chatting/fonts/fontawesomefour_icons.dart';
 import 'package:chatting/screens/tabs/post.dart';
 import 'package:chatting/screens/tabs/chat.dart';
 import 'package:chatting/screens/tabs/friend.dart';
 import 'package:chatting/screens/tabs/settings.dart';
+import 'package:chatting/screens/createpost.dart';
 
 void main() => runApp(Home());
 
@@ -329,7 +329,15 @@ class _State extends State<MyNavigationBar> {
         floatingActionButton: tabIndex == 0
             ? FloatingActionButton(
                 backgroundColor: Color(0xff39CEFD),
-                onPressed: null,
+                onPressed: () => {
+                  print("Click to open post creation page."),
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (BuildContext context) => Createpost(),
+                    ),
+                  )
+                },
                 child: Icon(
                   Icons.message,
                   color: Colors.white,
